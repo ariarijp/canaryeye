@@ -40,7 +40,7 @@ func Run(c config, m *map[string]int, begin *time.Time, cmd string) {
 		result := map[string]int{}
 
 		for host, cnt := range *m {
-			if cnt > c.Threshold {
+			if cnt >= c.Threshold {
 				result[host] = cnt
 			}
 		}
